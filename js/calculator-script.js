@@ -4,7 +4,7 @@ function Calculate(event)
     const num1 = document.getElementById("txtNum1");
     const num2 = document.getElementById("txtNum2");
 
-    if (event.target.value === "CLEAR") {
+    if (event.target.value == "CLEAR") {
         num1.value = '';
         num2.value = '';
         return;
