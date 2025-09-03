@@ -1,22 +1,6 @@
 const num1 = document.getElementById("txtNum1");
 const num2 = document.getElementById("txtNum2");
 
-num1.addEventListener("keydown", (e) => 
-{
-    if ('a' <= e.key && e.key <= 'z')
-    {
-        e.preventDefault();
-    }
-});
-
-num2.addEventListener("keydown", (e) => 
-{
-    if ('a' <= e.key && e.key <= 'z')
-    {
-        e.preventDefault();
-    }
-});
-
 function Calculate(event)
 {
 
