@@ -1,8 +1,24 @@
+const num1 = document.getElementById("txtNum1");
+const num2 = document.getElementById("txtNum2");
+
+num1.addEventListener("keydown", (e) => 
+{
+    if ('a' <= e.key && e.key <= 'z')
+    {
+        e.preventDefault();
+    }
+});
+
+num2.addEventListener("keydown", (e) => 
+{
+    if ('a' <= e.key && e.key <= 'z')
+    {
+        e.preventDefault();
+    }
+});
 
 function Calculate(event)
 {
-    const num1 = document.getElementById("txtNum1");
-    const num2 = document.getElementById("txtNum2");
 
     if (event.target.value == "CLEAR") {
         num1.value = '';
@@ -13,22 +29,38 @@ function Calculate(event)
     let n1 = +num1.value;
     let n2 = +num2.value;
 
-    let res = "Result: ";
-    
     switch (event.target.value) {
         case '+':
-            res += n1+n2;
+            Add(n1, n2);
             break;
         case '-':
-            res += n1-n2;
+            Subtract(n1, n2);
             break;
         case '*':
-            res += n1*n2;
+            Multiply(n1, n2);
             break;
         case '/':
-            res += n1/n2;
+            Divide(n1, n2);
             break;
     }
+}
 
-    alert(res);
+function Add(num1, num2)
+{
+    alert("Sum: " + (num1 + num2));
+}
+
+function Subtract(num1, num2)
+{ 
+    alert("Difference: " + (num1 - num2));
+}
+
+function Multiply(num1, num2)
+{
+    alert("Product: " + (num1 * num2));
+}
+
+function Divide(num1, num2)
+{
+    alert("Quotient: " + (num1 / num2));
 }
